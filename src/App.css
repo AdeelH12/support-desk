@@ -1,38 +1,174 @@
+/* App.css */
+
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
 .App {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 14px rgba(0,0,0,0.1);
+}
+
+/* Header */
+h1 {
+  font-weight: 700;
+  text-align: center;
+  color: #004466;
+  margin-bottom: 30px;
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul li {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 18px;
+  background-color: #007acc;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #005fa3;
+  outline: none;
+}
+
+/* Forms */
+form {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #007acc;
   color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover,
+button:focus {
+  background-color: #005fa3;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button + button {
+  margin-left: 10px;
+}
+
+/* Ticket ID display */
+p {
+  text-align: center;
+  font-weight: 600;
+  color: #007acc;
+  margin-top: 15px;
+}
+
+/* Lists */
+ol {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  padding-left: 20px;
+}
+
+li {
+  background: #eaf4fc;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  font-size: 1rem;
+}
+
+li strong {
+  color: #004466;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+li em {
+  font-style: normal;
+  color: #555;
+  display: block;
+  margin: 3px 0;
+}
+
+li span {
+  font-weight: 600;
+  color: #007acc;
+}
+
+/* Status message */
+h4 {
+  text-align: center;
+  color: #004466;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  form {
+    width: 90%;
   }
 }
